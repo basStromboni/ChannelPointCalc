@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Channel Point Time Calculator</title>
+        <script src="calculation.js"></script>
+    </head>
+    <Body>
+      <form onsubmit="calculateWatchTime()">
+        <h1> Curious about how long you have to watch to earn that redeem? </h1>
+        <p> Fill out the information below and we'll caluclate it for you! </p>
+        <label id="channel-points-label">Channel Points: </label>
+        <input type="number" id="channel-points-input" placeholder="Channel Points">
+        <br>
+          <fieldset>
+            <h2>Subscriber Status?</h2>
+            <label for="non-sub"> Non-Subscriber </label>
+            <input type="radio" id="non-sub" name="subscriber-status">
+            <br>
+            <label for="Tier1"> Tier 1 </label>
+            <input type="radio" id="Tier1" name="subscriber-status">
+            <br>
+            <label for="Tier2"> Tier 2 </label>
+            <input type="radio" id="Tier2" name="subscriber-status">
+            <br>
+            <label for="Tier3"> Tier 3 </label>
+            <input type="radio" id="Tier3" name="subscriber-status">
+            <br>
+           </fieldset>
+           <fieldset>
+             <h2> Active Watcher? </h2>
+             <label>Yes</label>
+             <input type="radio" id="active-watcher-yes" name="active-watcher" value="yes">
+                    <br>
+             <label>No</label>
+             <input type="radio" id="active-watcher-no" name="active-watcher" value="no">
+             <br>
+          </fieldset>
+          <fieldset>
+            <h2> Watch Streak? </h2>
+            <!-- streaks for 2, 3 ,4 and 5+ -->
+            <label> No watch streak: </label>
+            <input type="radio" id="watch-streak-no" name="watch-streak" value="no">
+            <br>
+            <label> Watch streak 2: </label>
+            <input type="radio" id="watch-streak-2" name="watch-streak" value="2">
+            <br>
+            <label> Watch streak 3: </label>
+            <input type="radio" id="watch-streak-3" name="watch-streak" value="3">
+            <br>
+            <label> Watch streak 4: </label>
+            <input type="radio" id="watch-streak-4" name="watch-streak" value="4">
+            <br>
+            <label> Watch streak 5+: </label>
+            <input type="radio" id="watch-streak-5+" name="watch-streak" value="5+">
+            <br>
+          </fieldset>
+          <fieldset>
+            <h2> Monthly Gift Sub? </h2>
+            <label> Yes </label>
+            <input type="radio" id="giftSubYes" name="monthly-gift-sub" value="yes">
+            <br>
+            <label> No </label>
+            <input type="radio" id="giftSubNo" name="monthly-gift-sub" value="no">
+          </fieldset>
+          <fieldset>
+            <h2> Monthly Bits Cheered? </h2>
+            <label> Yes </label>
+            <input type="radio" id="bitsCheeredYes" name="monthly-bits-cheered" value="yes">
+            <br>
+            <label> No </label>
+            <input type="radio" id="bitsCheeredNo" name="monthly-bits-cheered" value="no">
+          </fieldset>
+          <button type="button" onclick="calculateWatchTime()">Calculate</button>
+          <div id="watch-time"></div>
+          </form>
+    </Body>
+</html>
